@@ -1,0 +1,27 @@
+/* DESIGN SYSTEM: change values here and the whole site updates. */
+:root {
+  /* Colors */
+  --bg: #0A0A0B;
+  --surface: #141416;
+  --text: #F2EFE9;
+  --muted: #8A8A90;
+  --accent: #FF4D2E;
+  --line: rgba(242, 239, 233, 0.14);
+
+  /* Fonts */
+  --font-display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-body: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale (clamp = min, preferred, max: shrinks on phones) */
+  --fs-hero: clamp(4rem, 19vw, 19rem);
+  --fs-body: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  --fs-small: 0.875rem;
+
+  /* Spacing */
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --nav-h: 4.5rem;
+
+  /* Motion: one easing and one duration used everywhere */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.8s;
+}

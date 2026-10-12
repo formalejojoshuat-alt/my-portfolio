@@ -1,0 +1,44 @@
+/* BASE: resets and rules shared by every section. */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+h1, p { margin: 0; }
+
+/* Visible keyboard focus */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Lets keyboard users skip the nav */
+.skip-link {
+  position: fixed; top: -4rem; left: var(--gutter); z-index: 100;
+  background: var(--accent); color: var(--bg); padding: 0.6rem 1rem; font-weight: 700;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Marks anything that still needs your real content */
+.placeholder-tag {
+  display: inline-block;
+  border: 1px dashed var(--muted);
+  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+  font-size: var(--fs-small);
+}
+
+/* Respect "reduce motion" settings */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+}
